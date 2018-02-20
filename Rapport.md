@@ -40,3 +40,10 @@ When you launch the game for the first time, it will open the farm page :
 2) Display the player amount of each ressource (Not money).
 3) Number of each beers the player possesses.
 
+
+### The Market
+![Alt_Text](https://github.com/HE-Arc/Beer-Empire/blob/master/Image/ConceptionMarket.PNG)
+
+
+### The Laboratory
+![Alt_Text](https://github.com/HE-Arc/Beer-Empire/blob/master/Image/ConceptionLaboratory.PNG)
