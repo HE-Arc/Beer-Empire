@@ -1,5 +1,5 @@
 # Beer-Empire
-Django project, a game where you conquere the world beer by beer.
+Django project, a game where you conquer the world beer by beer.
 
 ## Introduction
 This project is a idle based game, the idea is to win money to improve youre empire to win more money, etc...
