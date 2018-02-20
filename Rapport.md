@@ -24,7 +24,7 @@ The game will be separated in for different part :
 ### The Farm Part
 When you launch the game for the first time, it will open the farm page :
 
-![Alt Text](https://github.com/Smookii/Beer-Empire/blob/master/Image/ConceptionFarm.PNG)
+![Alt Text](https://github.com/HE-Arc/Beer-Empire/blob/master/Image/ConceptionFarm.PNG)
 
 1) Represents the fields owned by the player, by clicking on them he will harvest ressources.
 2) Display the player amount of each ressource (Not money).
@@ -34,7 +34,7 @@ When you launch the game for the first time, it will open the farm page :
 
 
 ### The Factory
-![Alt_Text](https://github.com/Smookii/Beer-Empire/blob/master/Image/ConceptionFactory.PNG)
+![Alt_Text](https://github.com/HE-Arc/Beer-Empire/blob/master/Image/ConceptionFactory.PNG)
 
 1) The BeerEngines defines how much beer you can actually make. Each engine upgrade a certain type of beer.
 2) Display the player amount of each ressource (Not money).
