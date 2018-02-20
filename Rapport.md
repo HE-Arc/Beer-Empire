@@ -38,5 +38,5 @@ When you launch the game for the first time, it will open the farm page :
 
 1) The BeerEngines defines how much beer you can actually make. Each engine upgrade a certain type of beer.
 2) Display the player amount of each ressource (Not money).
-3) Numbers of each beers the player possesse.
+3) Number of each beers the player possesses.
 
