@@ -27,8 +27,8 @@ When you launch the game for the first time, it will open the farm page :
 ![Alt Text](https://github.com/HE-Arc/Beer-Empire/blob/master/Image/ConceptionFarm.PNG)
 
 1) Represents the fields owned by the player, by clicking on them he will harvest ressources.
-2) Display the player amount of each ressource (Not money).
-3) Sell the ressources against money.
+2) Display the player amount of ressources, money not included.
+3) Sell the ressources for money.
 4) Buttons who increase the amount of ressource harvested in the fields.
 
 
