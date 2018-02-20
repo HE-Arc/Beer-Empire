@@ -39,11 +39,18 @@ When you launch the game for the first time, it will open the farm page :
 1) The BeerEngines defines how much beer you can actually make. Each engine upgrade a certain type of beer.
 2) Display the player amount of each ressource (Not money).
 3) Number of each beers the player possesses.
-
+4)
+5)
 
 ### The Market
 ![Alt_Text](https://github.com/HE-Arc/Beer-Empire/blob/master/Image/ConceptionMarket.PNG)
-
+1)
+2)
+3)
+4)
 
 ### The Laboratory
 ![Alt_Text](https://github.com/HE-Arc/Beer-Empire/blob/master/Image/ConceptionLaboratory.PNG)
+1)
+2)
+3)
