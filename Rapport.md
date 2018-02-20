@@ -2,7 +2,7 @@
 Django project, a game where you conquer the world beer by beer.
 
 ## Introduction
-This project is about the creation of an idle game, earn money to improve your empire and to earn even MORE money!
+This project is about the creation of an idle game in wich earn money to improve your empire and to earn even MORE money!
 
 First of all, the player starts with a simple farm, he will need to harvest ressources like wheat, corn, hop and yeast. Those ressources can be sold. With the money aquired the player will be able to buy upgrades for his farm. With enough money, he will be able to buy the brewery where the real game starts.
 
