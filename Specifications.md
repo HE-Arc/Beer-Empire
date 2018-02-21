@@ -6,15 +6,18 @@ The game is around the theme of beer and consist in four stage :
   * The collecting is defined simply by clicking on fields.
   
   
+  
 * This factory will provide beers, that can be sold by contracts provided by missions. Missions exemple :
   * Spend a certain amount of ressources
   * Create a certain amount of ressources, in a determinate time.
   * (Bonus : Minigames)
   
   
+  
 * Afterwards, the player will reach the market part, where he will be able to bought different markets who will automaticly sell youre beers.
   * The market will be related to a land.
   * (Bonus : Transfer of ressource beetween players)
+
 
 
 * Finnaly, the player attain the laboratory part, where you will devellop technologie to increase income, production and upgrade overhall.
