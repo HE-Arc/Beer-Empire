@@ -14,11 +14,10 @@ Lastly, it will be possible to unlock a laboratory, in order to research new kin
 
 
 ## Conception
-The game will be separated in for different part :
+The game will be separated in two different part (third in bonus) :
 - The Farm Part
 - The Factory Part
 - The Market Part
-- The Laboratory Part
 
 
 ### The Farm Part
@@ -40,7 +39,6 @@ When you launch the game for the first time, it will open the farm page :
 2) Display the player amount of each ressource (Not money).
 3) Number of each beers the player possesses.
 4) Buttons to launch different missions.
-5) Buttons to upgrade the capacity of production for each BeerEngine
 
 ### The Market
 ![Alt_Text](https://github.com/HE-Arc/Beer-Empire/blob/master/Image/ConceptionMarket.PNG)
