@@ -42,13 +42,9 @@ When you launch the game for the first time, it will open the farm page :
 
 ### The Market
 ![Alt_Text](https://github.com/HE-Arc/Beer-Empire/blob/master/Image/ConceptionMarket.PNG)
-1) 
-2) 
-3) 
-4) 
+1) This list display the other player ressources you can bought.
+2) This list display the ressources you can sell to other player.
 
 ### The Laboratory
 ![Alt_Text](https://github.com/HE-Arc/Beer-Empire/blob/master/Image/ConceptionLaboratory.PNG)
-1) 
-2) 
-3) 
+1) The technologic tree is a list of different upgrade, but also the employees who will automaticly harvest/make ressources/beers every second.
