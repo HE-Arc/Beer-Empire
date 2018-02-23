@@ -8,10 +8,6 @@ First of all, the player starts with a simple farm, he will need to harvest ress
 
 The brewery will enable the player to brew different type of beers using the farm production to get a high profit. Missions will be given to the player for him to ensure the survival or enrichment of his brewery: Oktoberfest, political assassination (using badly brewed beers).
 
-With enough money, the player's company will be able to access the market. The market will allow the player to buy opponents shops in order to get a world monopoly on beer. It will also allow different players to exchange ressources between each others.
-
-Lastly, it will be possible to unlock a laboratory, in order to research new kind of beers and upgrades.
-
 
 ## Conception
 The game will be separated in two different part (third in bonus) :
