@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from BeerEmpire import views
 from django.contrib.auth import views as auth_view
+from . import  views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accueil', views.home),
+    path('game/', include('Game.urls')),
     path('login', auth_view.login, {'template_name': 'login.html'}, name='login'),
     path('logout', auth_view.logout, {'template_name': 'logged_out.html'}, name='logout'),
-    path('game/', include('Game.urls')),
+
 ]

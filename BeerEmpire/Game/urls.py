@@ -1,5 +1,6 @@
 from django.urls import path, include
-from BeerEmpire import views
+from . import views
 
 urlpatterns = [
+    path('home', views.home)
 ]
