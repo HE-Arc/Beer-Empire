@@ -1,0 +1,80 @@
+html, body, root {
+  margin:0px 0px 0px 0px;
+  font-family: 'Cantarell', sans-serif;
+  background-color: #ebebeb;
+}
+
+a{
+  color:inherit;
+  text-decoration: inherit;
+}
+
+a:active{
+  color:inherit;
+  text-decoration: inherit;
+}
+
+nav{
+  background-color: #101010;
+  color:white;
+  height:5vh;
+  line-height: 5vh;
+  font-size: 2.5vh;
+  padding: 0 10vw 0 10vw;
+}
+
+nav ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+  height: 5vh;
+  line-height: 5vh;
+}
+
+nav ul li {
+  display: inline-block;
+  height:5vh;
+  line-height: 5vh;
+  vertical-align: top;
+  min-width: 5vw;
+  margin-right:1vw;
+}
+
+aside{
+  display: inline-block;
+  width: 15vw;
+  margin-top: 3vh;
+  margin-left: 10vw;
+}
+
+.cards{
+  border-bottom: solid .5vh;
+  margin-bottom: 2vh;
+}
+
+.content{
+  display: inline-block;
+  vertical-align: top;
+  width: 60vw;
+  margin-left: 5vw;
+}
+
+
+/*COLORS*/
+
+/*Malt, Hops, Yeast*/
+
+.malt{
+  background:#dec995;
+  border-color: #ceb985;
+}
+
+.hops{
+  background:#74a147;
+  border-color:#649137;
+}
+
+.yeast{
+  background:#e0c39e;
+  border-color: #d0b38e;
+}
