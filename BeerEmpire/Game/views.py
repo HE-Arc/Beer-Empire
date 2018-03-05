@@ -1,9 +1,10 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
-def home(request):
-    """ Exemple de page non valide au niveau HTML pour que l'exemple soit concis """
-    return HttpResponse("""
-        <h1>Bienvenue sur mon blog !</h1>
-        <p>Les crêpes bretonnes ça tue des mouettes en plein vol !</p>
-    """)
+def index(request):
+    context = {}
+    return render(request, 'index.html', context)
+
+
+def farm(request):
+    context = {"Bonjour et bienvenu dans la ferme !"}
+    return render(request, 'index.html', context)
