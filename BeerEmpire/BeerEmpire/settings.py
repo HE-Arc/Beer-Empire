@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'BeerEmpire',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'fr-FR'
 
-TIME_ZONE = 'EUROPE/BERLIN'
+TIME_ZONE = 'Europe/Zurich'
 
 USE_I18N = True
 
