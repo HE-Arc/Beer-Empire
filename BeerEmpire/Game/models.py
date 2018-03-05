@@ -9,7 +9,7 @@ class Beer(models.Model):
     name = models.CharField(max_length=32)
     desc = models.TextField()
     cost = models.IntegerField()
-    
+
     need_malt = models.IntegerField()
     need_hops = models.IntegerField()
     need_yeast = models.IntegerField()
