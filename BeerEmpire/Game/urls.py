@@ -6,5 +6,6 @@ from . import views
 urlpatterns = [
      path('', views.index, name='index'),
      path('', include('django.contrib.auth.urls')),
-     path('farm', views.farm, name='Farm'),
+     # path('farm', views.farm, name='farm'),
+     path('farm', views.FarmView.as_view(), name='farm'),
 ]
