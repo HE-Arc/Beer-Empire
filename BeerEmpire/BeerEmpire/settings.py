@@ -78,10 +78,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'BeerEmpire',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'USER': os.environ.get('GROUPNAME', 'postgres'),
+        'PASSWORD': os.environ.get('PASSWORD', 'admin'),
+        'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
+        'PORT': os.environ.get('POSTGRES_PORT', '5432'),
     }
 }
 
