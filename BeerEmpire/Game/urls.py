@@ -5,8 +5,9 @@ from django.views.generic.base import RedirectView
 
 urlpatterns = [
      path('', include('django.contrib.auth.urls')),
+
      path('', RedirectView.as_view(url='/login', permanent=False), name='index'),
-     path('farm', views.game.farm, name='Farm'),
+     path('farm', views.FarmView.as_view(), name='Farm'),
      path('factory', views.game.factory, name='Factory'),
      path('market', views.game.market, name='Market')
 ]
