@@ -11,9 +11,9 @@ function clickOnHops(){nbHops++; updateValues();}
 
 function updateValues()
 {
-    document.getElementById("nbMalt").innerHTML  = nbMalt;
-    document.getElementById("nbYeast").innerHTML  = nbYeast;
-    document.getElementById("nbHops").innerHTML  = nbHops;
+    document.getElementById("nbMalt").innerHTML  = nbMalt + "<small>kg</small>";
+    document.getElementById("nbYeast").innerHTML  = nbYeast  + "<small>kg</small>";
+    document.getElementById("nbHops").innerHTML  = nbHops  + "<small>kg</small>";
 
 }
 
