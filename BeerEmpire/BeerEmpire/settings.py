@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'BeerEmpire.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BeerEmpire',
+        'NAME': os.environ.get('GROUPNAME', 'BeerEmpire'),
         'USER': os.environ.get('GROUPNAME', 'postgres'),
         'PASSWORD': os.environ.get('PASSWORD', 'admin'),
         'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
