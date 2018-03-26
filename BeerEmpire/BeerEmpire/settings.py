@@ -25,7 +25,7 @@ SECRET_KEY = 'vnc=q=re085w7wcav7hr99a7@@d7-9ax0lze2!vi9f5fcf03bv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["beerempire.srvz-webapp.he-arc.ch"]
+ALLOWED_HOSTS = ["beerempire.srvz-webapp.he-arc.ch","127.0.0.1"]
 
 
 # Application definition
