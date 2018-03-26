@@ -5,6 +5,7 @@
     <title>{% block title %}Beer Empire{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
     <link rel="stylesheet" href="{% static "beerfactory.css" %}"/>
+    <script src="{% static "farm_function.js" %}"></script>
   </head>
   <body>
     <nav>
@@ -17,13 +18,13 @@
     </nav>
     <aside>
       <div class="cards malt">
-        Malt
+        <p>Malt</p><p id="nbMalt"></p>
       </div>
       <div class="cards yeast">
-        Yeast
+        <p>Yeast</p><p id="nbYeast"></p>
       </div>
       <div class="cards hops">
-        Hops
+        <p>Hops</p><p id="nbHops"></p>
       </div>
     </aside>
     <div class="content">
