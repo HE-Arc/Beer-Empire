@@ -8,7 +8,6 @@ class FarmView(generic.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['informations du joueur'] = "Kek"
         return context
 
 def factory(request):

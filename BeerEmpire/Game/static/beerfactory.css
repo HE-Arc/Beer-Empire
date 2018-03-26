@@ -82,3 +82,16 @@ aside{
   background:#e0c39e;
   border-color: #d0b38e;
 }
+
+.quantum{
+  display: inline-block;
+  width: 100%;
+
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+aside small{
+  font-size: 13px;
+}
