@@ -82,3 +82,21 @@ aside{
   background:#e0c39e;
   border-color: #d0b38e;
 }
+
+.farm{
+  width: 30vw;
+  height: 30vw;
+}
+
+#farmMalt{
+  background:#dec995;
+  border-color: #ceb985;
+}
+#farmHops{
+  background:#74a147;
+  border-color:#649137;
+}
+#farmYeast{
+  background:#e0c39e;
+  border-color: #d0b38e;
+}
