@@ -63,43 +63,45 @@ aside{
   float: right;
 }
 
+.farm{
+  background-image: url("/static/fields_texture.png");
+  border-bottom: solid .5vh;
+  height: 10vh;
+  width: 100%;
+  user-select:none;
+  -ms-user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  line-height: 10vh;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 3vh;
+  margin-top: 1em;
+}
+
+.farm:hover{
+  cursor: pointer;
+}
 
 /*COLORS*/
 
 /*Malt, Hops, Yeast*/
 
 .malt{
-  background:#dec995;
+  background-color:#dec995;
   border-color: #ceb985;
 }
 
 .hops{
-  background:#d6912a;
+  background-color:#d6912a;
   border-color:#c6811a;
 }
 
 .yeast{
-  background:#e0c39e;
+  background-color:#e0c39e;
   border-color: #d0b38e;
 }
 
-.farm{
-  width: 30vw;
-  height: 30vw;
-}
-
-#farmMalt{
-  background:#dec995;
-  border-color: #ceb985;
-}
-#farmHops{
-  background:#74a147;
-  border-color:#649137;
-}
-#farmYeast{
-  background:#e0c39e;
-  border-color: #d0b38e;
-}
 .quantum{
   display: inline-block;
   width: 100%;
