@@ -41,6 +41,21 @@ nav ul li {
   text-align: center;
 }
 
+nav button{
+  background: none;
+  border: none;
+  text-align: center;
+  color:white;
+  height:5vh;
+  line-height: 5vh;
+  font-size: 2.5vh;
+  line-height: 5vh;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
 aside{
   display: inline-block;
   width: 15vw;
@@ -65,7 +80,7 @@ aside{
 }
 
 .farm{
-  background-image: url("/static/fields_texture.png");
+  background-image: url("/static/fields_texture_2.png");
   border-bottom: solid .5vh;
   height: 10vh;
   width: 100%;

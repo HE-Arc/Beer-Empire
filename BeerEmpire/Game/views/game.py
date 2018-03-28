@@ -2,12 +2,13 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views import generic, View
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from Game.models import Profile
 
-from Game.models import Profile
-
-class GameViewBase(generic.TemplateView):
+class GameViewBase(LoginRequiredMixin, generic.TemplateView):
+    login_url = '/login/'
+    redirect_field_name = 'redirect_to'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
