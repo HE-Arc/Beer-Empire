@@ -87,26 +87,10 @@ namespace :python do
     desc 'Create venv'
     task :create_venv do
         on roles([:app, :web]) do |h|
-	    execute "python3.6 -m venv #{venv_path}"
-            execute "source #{venv_path}/bin/activate"
-	    execute "#{venv_path}/bin/pip install -r #{release_path}/requirements.txt"
+	    		execute "python3.6 -m venv #{venv_path}"
+      execute "source #{venv_path}/bin/activate"
+	    execute :sudo, "pip install -r #{release_path}/requirements.txt"
+			execute "python3.6 #{release_path}/BeerEmpire/manage.py collectstatic --no-input"
         end
     end
-end
-
-after 'python:create_venv', 'django:static'
-
-namespace :django do
-
-	def venv_path
-			File.join(shared_path, 'env')
-	end
-
-	desc 'Collect Static Files'
-	task :static do
-			on roles([:app, :web]) do |h|
-		execute "source #{venv_path}/bin/activate"
-		execute "python #{release_path}/BeerEmpire/manage.py collectstatic --no-input"
-	end
-	end
 end
