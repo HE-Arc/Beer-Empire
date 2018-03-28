@@ -18,19 +18,22 @@
     </nav>
     <aside>
       <div id="factory_name" class="cards malt">
-        {{ factoryName }}
+        {{ profile.factory_name }}
       </div>
       <div class="cards malt">
         <span>Malt</span>
-        <span class="quantum" id="nbMalt"> 0<small>kg</small></span>
+        <span class="quantum" id="nbMalt">
+          {{ profile.get_malt }}<small>kg</small></span>
       </div>
       <div class="cards yeast">
         <span>Yeast</span>
-        <span class="quantum" id="nbYeast"> 0<small>kg</small></span>
+        <span class="quantum" id="nbYeast">
+          {{ profile.get_yeast }}<small>kg</small></span>
       </div>
       <div class="cards hops">
         <span>Hops</span>
-        <span class="quantum" id="nbHops"> 0<small>kg</small></span>
+        <span class="quantum" id="nbHops">
+          {{ profile.get_hops }}<small>kg</small></span>
       </div>
     </aside>
     <div class="content">
