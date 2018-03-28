@@ -26,9 +26,10 @@ class Profile(models.Model):
     ressources_yeast = models.IntegerField(default=0)
     ressources_money = models.IntegerField(default=0)
 
-    farm_malt = models.IntegerField(default=0)
-    farm_hops = models.IntegerField(default=0)
-    farm_yeast = models.IntegerField(default=0)
+    employee_malt = models.IntegerField(default=0)
+    employee_hops = models.IntegerField(default=0)
+    employee_yeast = models.IntegerField(default=0)
+    employee_idle = models.IntegerField(default=0)
 
     beers = models.ManyToManyField(Beer, through='ProfileBeer')
 
