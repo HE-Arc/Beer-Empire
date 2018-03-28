@@ -137,22 +137,6 @@ aside{
   border-color: #d0b38e;
 }
 
-.farm{
-  width: 30vw;
-  height: 30vw;
-}
-
-#farmMalt{
-  background:#dec995;
-  border-color: #ceb985;
-}
-#farmHops{
-  background:#d6912a;
-  border-color:#c6811a;
-}
-#farmYeast{
-  background:#e0c39e;
-
 #factory_name{
   background-color:#e0c39e;
   border-color: #d0b38e;
