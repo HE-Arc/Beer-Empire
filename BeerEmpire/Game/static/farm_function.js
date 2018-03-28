@@ -1,14 +1,11 @@
-// See baseAuth for the origine of those variables.
+// See base.html for the origine of those variables.
 var nbMalt = malt;
 var nbYeast = yeast;
 var nbHops = hops;
 
-function clickOnMalt(){nbMalt++; updateValues();}
+function clickOnMalt(){ nbMalt++; updateValues();}
 function clickOnYeast(){nbYeast++; updateValues();}
 function clickOnHops(){nbHops++; updateValues();}
-
-
-
 
 function updateValues()
 {
