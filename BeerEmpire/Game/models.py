@@ -34,6 +34,31 @@ class Profile(models.Model):
     def __str__(self):
         return self.factory_name
 
+
+    def get_malt(self):
+        return 0
+
+
+    def get_hops(self):
+        return self.ressources_hops
+
+
+    def get_yeast(self):
+        return self.ressources_yeast
+
+
+    def get_farm_malt(self):
+        return self.farm_malt
+
+
+    def get_farm_hops(self):
+        return self.farm_hops
+
+
+    def get_farm_yeast(self):
+        return self.farm_yeast
+
+
 class ProfileBeer(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     beer = models.ForeignKey(Beer, on_delete=models.CASCADE)
