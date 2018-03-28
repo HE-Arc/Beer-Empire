@@ -3,18 +3,28 @@ from django.shortcuts import render, redirect
 from django.views import generic, View
 #from django.urls import reverse_lazy
 
+from Game.models import Profile
+
 class FarmView(generic.TemplateView):
     template_name= "game/farm.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['factoryName'] = Profile.objects.get(user = self.request.user)
         return context
 
-def factory(request):
-    context = {}
-    return render(request, 'game/factory.html', context)
+
+class FactoryView(generic.TemplateView):
+    template_name= "game/factory.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
 
 
-def market(request):
-    context = {}
-    return render(request, 'game/market.html', context)
+class MarketView(generic.TemplateView):
+    template_name= "game/market.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context

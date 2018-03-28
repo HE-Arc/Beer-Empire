@@ -102,6 +102,13 @@ aside{
   border-color: #d0b38e;
 }
 
+#factory_name{
+  background-color:#e0c39e;
+  border-color: #d0b38e;
+  text-align: center;
+  font-size: 2em;
+}
+
 .quantum{
   display: inline-block;
   width: 100%;

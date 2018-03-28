@@ -8,6 +8,6 @@ urlpatterns = [
 
      path('', RedirectView.as_view(url='/login', permanent=False), name='index'),
      path('farm', views.FarmView.as_view(), name='Farm'),
-     path('factory', views.game.factory, name='Factory'),
-     path('market', views.game.market, name='Market')
+     path('factory', views.FactoryView.as_view(), name='Factory'),
+     path('market', views.MarketView.as_view(), name='Market')
 ]
