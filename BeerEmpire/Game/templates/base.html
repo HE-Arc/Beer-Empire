@@ -17,10 +17,10 @@
   <body>
     <nav>
       <ul>
-        <li><a href="../farm">Farm</a></li>
-        <li><a href="../factory">Factory</a></li>
-        <li><a href="../market">Market</a></li>
-        <li class="right"><a href="">Logout</a></li>
+        <li><a href="/farm">Farm</a></li>
+        <li><a href="/factory">Factory</a></li>
+        <li><a href="/market">Market</a></li>
+        <li class="right"><form><button type="submit" formaction="{% url 'logout' %}" formmethode="POST">Logout</button></form></li>
       </ul>
     </nav>
     <aside>

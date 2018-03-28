@@ -124,3 +124,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '../farm'
+LOGOUT_REDIRECT_URL = '/'
