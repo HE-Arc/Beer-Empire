@@ -17,6 +17,7 @@ class Beer(models.Model):
     def __str__(self):
         return self.name
 
+
 class Profile(models.Model):
     factory_name = models.CharField(max_length=32)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -33,30 +34,6 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.factory_name
-
-
-    def get_malt(self):
-        return 0
-
-
-    def get_hops(self):
-        return self.ressources_hops
-
-
-    def get_yeast(self):
-        return self.ressources_yeast
-
-
-    def get_farm_malt(self):
-        return self.farm_malt
-
-
-    def get_farm_hops(self):
-        return self.farm_hops
-
-
-    def get_farm_yeast(self):
-        return self.farm_yeast
 
 
 class ProfileBeer(models.Model):
