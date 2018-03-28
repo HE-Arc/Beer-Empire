@@ -38,6 +38,22 @@ nav ul li {
   vertical-align: top;
   min-width: 5vw;
   margin-right:1vw;
+  text-align: center;
+}
+
+nav button{
+  background: none;
+  border: none;
+  text-align: center;
+  color:white !important;
+  height:5vh;
+  line-height: 5vh;
+  font-size: 2.5vh!important;
+  line-height: 5vh;
+}
+
+button:hover{
+  cursor: pointer;
 }
 
 aside{
@@ -59,27 +75,65 @@ aside{
   margin-left: 5vw;
 }
 
+@media only screen and (max-width: 600px) {
+    html{
+      font-size: 12px;
+    }
+    aside{
+      display: block;
+      margin-left:5vw;
+      margin-right:5vw;
+      width:90vw;
+    }
+
+    .content{
+      display: block;
+      margin-left:5vw;
+      margin-right:5vw;
+      width:90vw;
+    }
+}
+
 .right{
   float: right;
 }
 
+.farm{
+  background-image: url("/static/fields_texture_2.png");
+  border-bottom: solid .5vh;
+  height: 10vh;
+  width: 100%;
+  user-select:none;
+  -ms-user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  line-height: 10vh;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 3vh;
+  margin-top: 1em;
+}
+
+.farm:hover{
+  cursor: pointer;
+}
 
 /*COLORS*/
 
 /*Malt, Hops, Yeast*/
 
 .malt{
-  background:#dec995;
+  background-color:#dec995;
   border-color: #ceb985;
 }
 
 .hops{
-  background:#d6912a;
+  background-color:#d6912a;
   border-color:#c6811a;
 }
 
 .yeast{
-  background:#e0c39e;
+  background-color:#e0c39e;
   border-color: #d0b38e;
 }
 
@@ -98,8 +152,14 @@ aside{
 }
 #farmYeast{
   background:#e0c39e;
+
+#factory_name{
+  background-color:#e0c39e;
   border-color: #d0b38e;
+  text-align: center;
+  font-size: 2em;
 }
+
 .quantum{
   display: inline-block;
   width: 100%;
@@ -111,4 +171,31 @@ aside{
 
 aside small{
   font-size: 13px;
+}
+
+/*Form*/
+
+form button{
+ color:#101010;
+ width:100%;
+ font-size: 1.2em;
+}
+
+label{
+  display: inline-block;
+  font-size: 1.2em;
+  width:100%;
+  margin-bottom:.2em;
+}
+
+input{
+  border:none;
+  background-color: #cfcfcf;
+  border-bottom: solid 5px #dfdfdf;
+  display: inline-block;
+  font-size: 1.2em;
+  height:1.4em;
+  padding-left: .2em;
+  width:calc(100% - .2em);
+  margin-bottom: 1em;
 }

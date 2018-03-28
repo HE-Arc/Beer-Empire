@@ -17,6 +17,7 @@ class Beer(models.Model):
     def __str__(self):
         return self.name
 
+
 class Profile(models.Model):
     factory_name = models.CharField(max_length=32)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -33,6 +34,7 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.factory_name
+
 
 class ProfileBeer(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)

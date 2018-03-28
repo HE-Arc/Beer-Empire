@@ -1,4 +1,11 @@
 {% load static %}
+
+<script>
+  var malt= "{{ profile.ressources_malt }}";
+  var yeast= "{{ profile.ressources_yeast }}";
+  var hops= "{{ profile.ressources_hops }}";
+</script>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,24 +17,30 @@
   <body>
     <nav>
       <ul>
-        <li><a href="../farm">Farm</a></li>
-        <li><a href="../factory">Factory</a></li>
-        <li><a href="../market">Market</a></li>
-        <li class="right"><a href="">Logout</a></li>
+        <li><a href="/farm">Farm</a></li>
+        <li><a href="/factory">Factory</a></li>
+        <li><a href="/market">Market</a></li>
+        <li class="right"><form><button type="submit" formaction="{% url 'logout' %}" formmethode="POST">Logout</button></form></li>
       </ul>
     </nav>
     <aside>
+      <div id="factory_name" class="cards malt">
+        {{ profile.factory_name }}
+      </div>
       <div class="cards malt">
         <span>Malt</span>
-        <span class="quantum" id="nbMalt"> 0<small>kg</small></span>
+        <span class="quantum" id="nbMalt">
+          {{ profile.ressources_malt }}<small>kg</small></span>
       </div>
       <div class="cards yeast">
         <span>Yeast</span>
-        <span class="quantum" id="nbYeast"> 0<small>kg</small></span>
+        <span class="quantum" id="nbYeast">
+          {{ profile.ressources_yeast }}<small>kg</small></span>
       </div>
       <div class="cards hops">
         <span>Hops</span>
-        <span class="quantum" id="nbHops"> 0<small>kg</small></span>
+        <span class="quantum" id="nbHops">
+          {{ profile.ressources_hops }}<small>kg</small></span>
       </div>
     </aside>
     <div class="content">
