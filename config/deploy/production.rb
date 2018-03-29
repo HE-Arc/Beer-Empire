@@ -60,7 +60,7 @@
 #     # password: "please use keys"
 #   }
 
-server "capython.srvz-webapp.he-arc.ch", user: "poweruser", 
+server "capython.srvz-webapp.he-arc.ch", user: "poweruser",
 					 roles: %w{app db web}, port: 2242
 
 set :deploy_to, "/var/www/#{fetch(:application)}"
@@ -87,9 +87,10 @@ namespace :python do
     desc 'Create venv'
     task :create_venv do
         on roles([:app, :web]) do |h|
-	    execute "python3.6 -m venv #{venv_path}"
-            execute "source #{venv_path}/bin/activate"
-	    execute "#{venv_path}/bin/pip install -r #{release_path}/requirements.txt"
+	    		execute "python3.6 -m venv #{venv_path}"
+      execute "source #{venv_path}/bin/activate"
+	    execute :sudo, "pip install -r #{release_path}/requirements.txt"
+			execute "python3.6 #{release_path}/BeerEmpire/manage.py collectstatic --no-input"
         end
     end
 end

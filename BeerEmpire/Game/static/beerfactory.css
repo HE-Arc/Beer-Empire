@@ -118,6 +118,23 @@ aside{
   margin-top: 1em;
 }
 
+.engine{
+  background-image: url("/static/gears.jpg");
+  border-bottom: solid .5vh;
+  height: 10vh;
+  width: 100%;
+  user-select:none;
+  -ms-user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  line-height: 10vh;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 3vh;
+  margin-top: 1em;
+}
+
+
 .farm:hover{
   cursor: pointer;
 }
