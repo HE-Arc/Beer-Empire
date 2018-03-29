@@ -99,18 +99,22 @@ aside{
 }
 
 .farm{
+  display: inline-block;
   background-image: url("/static/fields_texture_2.png");
   border-bottom: solid .5vh;
   height: 10vh;
-  width: 100%;
+  width: calc(100% - 1.5em);
+
   user-select:none;
   -ms-user-select:none;
   -webkit-user-select:none;
   -moz-user-select:none;
+
   line-height: 10vh;
-  vertical-align: middle;
   text-align: center;
   font-size: 3vh;
+  color: white;
+  font-weight: bold;
   margin-top: 1em;
 }
 
@@ -180,6 +184,59 @@ input{
   font-size: 1.2em;
   height:1.4em;
   padding-left: .2em;
-  width:calc(100% - .2em);
+  width:calc(100% - 1.5em);
   margin-bottom: 1em;
+}
+
+.buttonzone{
+  display: inline-block;
+  width: 1.5em;
+  height: 10vh;
+  position: absolute;
+  margin-top: 1em;
+  margin-left: 0.1em;
+}
+
+.button{
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: 0.3em;
+  text-align:center;
+
+  box-shadow: 0.1em 0.1em grey;
+  color: white;
+  font-size: 1em;
+  font-family: cursive;
+  font-style: bold;
+  vertical-align: center;
+
+  user-select:none;
+  -ms-user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+}
+
+.add{
+  background-color: #f46036;
+}
+
+.add:active{
+  background-color: #015489
+}
+
+.sub{
+  background-color: #f43a25;
+}
+
+.sub:active{
+  background-color: #983547;
+}
+
+.small{
+  float: right;
+  padding-right: 1em;
+  margin-top: 1em;
+  font-size: 0.8em;
+  font-weight: normal;
 }

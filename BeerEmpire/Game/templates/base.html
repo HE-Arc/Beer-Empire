@@ -1,11 +1,5 @@
 {% load static %}
 
-<script>
-  var malt= "{{ profile.ressources_malt }}";
-  var yeast= "{{ profile.ressources_yeast }}";
-  var hops= "{{ profile.ressources_hops }}";
-</script>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,22 +18,22 @@
       </ul>
     </nav>
     <aside>
-      <div id="factory_name" class="cards malt">
+      <div id="factory_name" class="cards malt" data-malt="{{ profile.ressources_malt }}">
         {{ profile.factory_name }}
       </div>
       <div class="cards malt">
         <span>Malt</span>
-        <span class="quantum" id="nbMalt">
+        <span class="quantum" id="nbMalt" data-malt="{{ profile.ressources_malt }}">
           {{ profile.ressources_malt }}<small>kg</small></span>
       </div>
       <div class="cards yeast">
         <span>Yeast</span>
-        <span class="quantum" id="nbYeast">
+        <span class="quantum" id="nbYeast" data-yeast="{{ profile.ressources_yeast }}">
           {{ profile.ressources_yeast }}<small>kg</small></span>
       </div>
       <div class="cards hops">
         <span>Hops</span>
-        <span class="quantum" id="nbHops">
+        <span class="quantum" id="nbHops" data-hops="  {{ profile.ressources_hops }}">
           {{ profile.ressources_hops }}<small>kg</small></span>
       </div>
     </aside>
