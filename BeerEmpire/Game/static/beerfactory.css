@@ -4,6 +4,10 @@ html, body, root {
   background-color: #ebebeb;
 }
 
+body{
+  margin-bottom: 1vh;
+}
+
 a{
   color:inherit;
   text-decoration: inherit;
