@@ -136,7 +136,8 @@ aside{
 }
 
 .engine{
-  background-image: url("/static/gears_2.png");
+  background-image: url("/static/drop.png");
+  background-repeat: repeat-x;
   border-top: solid 2vh;
   height: 10vh;
   width: 100%;
