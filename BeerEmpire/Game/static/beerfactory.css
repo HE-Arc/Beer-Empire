@@ -66,6 +66,14 @@ aside{
 .cards{
   border-bottom: solid .5vh;
   margin-bottom: 2vh;
+  padding: .5vw;
+}
+
+.cards .title{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.25em;
 }
 
 .content{
@@ -75,7 +83,7 @@ aside{
   margin-left: 5vw;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     html{
       font-size: 12px;
     }
@@ -103,7 +111,7 @@ aside{
   background-image: url("/static/fields_texture_2.png");
   border-bottom: solid .5vh;
   height: 10vh;
-  width: calc(100% - 1.5em);
+  width: 100%;
 
   user-select:none;
   -ms-user-select:none;
@@ -118,9 +126,14 @@ aside{
   margin-top: 1em;
 }
 
+.farm .inner{
+  display: inline-block;
+  width: calc(100% - 7em);
+}
+
 .engine{
-  background-image: url("/static/gears.jpg");
-  border-bottom: solid .5vh;
+  background-image: url("/static/gears_2.png");
+  border-top: solid 2vh;
   height: 10vh;
   width: 100%;
   user-select:none;
@@ -158,6 +171,12 @@ aside{
   border-color: #d0b38e;
 }
 
+.beer{
+  background-color: #ff9b00;
+  border-color: #f6ddc7;
+  color:white;
+}
+
 #factory_name{
   background-color:#e0c39e;
   border-color: #d0b38e;
@@ -171,6 +190,9 @@ aside{
 
   text-align: center;
   font-size: 30px;
+}
+
+.quantum small{
   font-weight: bold;
 }
 
@@ -205,33 +227,25 @@ input{
   margin-bottom: 1em;
 }
 
-.buttonzone{
-  display: inline-block;
-  width: 1.5em;
-  height: 10vh;
-  position: absolute;
-  margin-top: 1em;
-  margin-left: 0.1em;
+.farm span{
+  height: 50%;
 }
 
-.button{
+.farm .buttonzone{
+  width:7em;
+  float:right;
+  font-size: .5em;
+  height: 4vh;
+  margin-right: 2vw;
+}
+
+.buttonzone .button{
+  margin:0px 0px 0px 0px;
+  vertical-align: middle;
+  line-height: 3em;
+  height: 3em;
+  width: 3em;
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  margin-top: 0.3em;
-  text-align:center;
-
-  box-shadow: 0.1em 0.1em grey;
-  color: white;
-  font-size: 1em;
-  font-family: cursive;
-  font-style: bold;
-  vertical-align: center;
-
-  user-select:none;
-  -ms-user-select:none;
-  -webkit-user-select:none;
-  -moz-user-select:none;
 }
 
 .add{
@@ -248,12 +262,4 @@ input{
 
 .sub:active{
   background-color: #983547;
-}
-
-.small{
-  float: right;
-  padding-right: 1em;
-  margin-top: 1em;
-  font-size: 0.8em;
-  font-weight: normal;
 }

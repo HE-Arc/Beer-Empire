@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'beerfactory.css' %}"/>
     <script src="{% static 'farm_function.js'%}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   </head>
   <body>
     <nav>
@@ -22,19 +23,22 @@
         {{ profile.factory_name }}
       </div>
       <div class="cards malt">
-        <span>Malt</span>
+        <span class="title">Malt</span>
         <span class="quantum" id="nbMalt" data-malt="{{ profile.ressources_malt }}">
           {{ profile.ressources_malt }}<small>kg</small></span>
+          <span id="farmerMalt" class="small">{{ profile.employee_malt }} farmer</span>
       </div>
       <div class="cards yeast">
-        <span>Yeast</span>
+        <span class="title">Yeast</span>
         <span class="quantum" id="nbYeast" data-yeast="{{ profile.ressources_yeast }}">
           {{ profile.ressources_yeast }}<small>kg</small></span>
+          <span id="farmerYeast" class="small">{{ profile.employee_yeast }} farmer</span>
       </div>
       <div class="cards hops">
-        <span>Hops</span>
+        <span class="title">Hops</span>
         <span class="quantum" id="nbHops" data-hops="  {{ profile.ressources_hops }}">
           {{ profile.ressources_hops }}<small>kg</small></span>
+          <span id="farmerHops" class="small">{{ profile.employee_hops }} farmer</span>
       </div>
     </aside>
     <div class="content">

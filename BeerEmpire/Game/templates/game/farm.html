@@ -16,31 +16,28 @@
 					data-hopsslaves="{{ profile.employee_hops }}"
 					data-idleslaves="{{ profile.employee_idle }}">
 				</div>
-				<div class="farm malt" onclick="clickOnMalt()">
-					Malt
-					<span id="farmerMalt" class="small">{{ profile.employee_malt }} farmer</span>
-				</div>
-				<div class="buttonzone">
-					<div class="button add" id="addSlaveMalt" onclick="ClickOnAddMaltSlave()">+</div>
-					<div class="button sub" id="subSlaveMalt" onclick="ClickOnSubMaltSlave()">-</div>
-				</div>
-
-				<div class="farm yeast" onclick="clickOnYeast()">
-					Yeast
-					<span id="farmerYeast"class="small">{{ profile.employee_yeast }} farmer</span>
-				</div>
-				<div class="buttonzone">
-					<div class="button add" id="addSlaveYeast" onclick="ClickOnAddYeastSlave()">+</div>
-					<div class="button sub" id="subSlaveYeast" onclick="ClickOnSubYeastSlave()">-</div>
+				<div class="farm malt">
+					<div class="inner" onclick="clickOnMalt()" >Malt</div>
+					<div class="buttonzone">
+						<div class="button add" id="addSlaveMalt" onclick="ClickOnAddMaltSlave()">+</div>
+						<div class="button sub" id="subSlaveMalt" onclick="ClickOnSubMaltSlave()">-</div>
+					</div>
 				</div>
 
-				<div class="farm hops" onclick="clickOnHops()">
-					Hops
-					<span id="farmerHops" class="small">{{ profile.employee_hops }} farmer</span>
+				<div class="farm yeast">
+					<div class="inner" onclick="clickOnYeast()">Yeast</div>
+					<div class="buttonzone">
+						<div class="button add" id="addSlaveYeast" onclick="ClickOnAddYeastSlave()">+</div>
+						<div class="button sub" id="subSlaveYeast" onclick="ClickOnSubYeastSlave()">-</div>
+					</div>
 				</div>
-				<div class="buttonzone">
-					<div class="button add" id="addSlaveHops" onclick="ClickOnAddHopsSlave()">+</div>
-					<div class="button sub" id="subSlaveHops" onclick="ClickOnSubHopsSlave()">-</div>
+
+				<div class="farm hops">
+					<div class="inner" onclick="clickOnHops()">Hops</div>
+					<div class="buttonzone">
+						<div class="button add" id="addSlaveHops" onclick="ClickOnAddHopsSlave()">+</div>
+						<div class="button sub" id="subSlaveHops" onclick="ClickOnSubHopsSlave()">-</div>
+					</div>
 				</div>
 			</div>
 		</div>
