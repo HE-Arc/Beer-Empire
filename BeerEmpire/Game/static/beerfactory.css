@@ -228,7 +228,7 @@ input{
   font-size: 1.2em;
   height:1.4em;
   padding-left: .2em;
-  width:calc(100% - 1.5em);
+  width:calc(100% - .2em);
   margin-bottom: 1em;
 }
 
