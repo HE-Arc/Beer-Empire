@@ -12,9 +12,9 @@
   <body>
     <nav>
       <ul>
-        <li><a href="/farm">Farm</a></li>
-        <li><a href="/factory">Factory</a></li>
-        <li><a href="/market">Market</a></li>
+        <li><a href="{% url 'Farm' %}">Farm</a></li>
+        <li><a href="{% url 'Factory' %}">Factory</a></li>
+        <li><a href="{% url 'Market' %}">Market</a></li>
         <li class="right"><form>{% csrf_token %}<button type="submit" formaction="{% url 'logout' %}" formmethod="POST">Logout</button></form></li>
       </ul>
     </nav>

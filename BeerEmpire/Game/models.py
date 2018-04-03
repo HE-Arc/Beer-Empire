@@ -40,7 +40,7 @@ class Profile(models.Model):
 class ProfileBeer(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     beer = models.ForeignKey(Beer, on_delete=models.CASCADE)
-    nb_beer = models.IntegerField()
+    nb_beer = models.IntegerField(default=0)
 
 
 @receiver(post_save, sender=User)

@@ -8,7 +8,8 @@
   <h3>Create new Account</h3>
   <form class="form-horizontal" role="form" action="" method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ userform.as_p }}
+    {{ profileform.as_p }}
   <button type="submit">Register</button>
   </form>
 </form>

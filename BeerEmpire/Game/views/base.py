@@ -5,28 +5,34 @@ from django.contrib.auth import authenticate, login
 from django.views import generic
 from django.views.generic import View
 from ..form import UserForm
+from ..form import ProfileForm
 
 def index(request):
     context = {}
     return render(request, 'registration/login.html', context)
 
 
-class UserFormView(View):
-    form_class = UserForm
+class RegisterView(View):
+    user_form_class = UserForm
+    profile_form_class = ProfileForm
     template_name = 'registration/register.html'
 
     def get(self, request):
-        form = self.form_class(None)
-        return render(request, self.template_name, {'form': form})
+        user_form = self.user_form_class(None)
+        profile_form = self.profile_form_class(None)
+        return render(request, self.template_name, {'userform': user_form, 'profileform':profile_form})
 
     def post(self, request):
-        form = self.form_class(request.POST)
+        user_form = self.user_form_class(request.POST)
+        profile_form = self.profile_form_class(request.POST)
 
-        if form.is_valid():
-            user = form.save(commit=False)
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
+        if user_form.is_valid() and profile_form.is_valid():
+            user = user_form.save(commit=False)
+            username = user_form.cleaned_data['username']
+            password = user_form.cleaned_data['password']
             user.set_password(password)
+            user.save()
+            user.profile.factory_name = profile_form.cleaned_data['factory_name']
             user.save()
 
             user = authenticate(username=username, password=password)
@@ -36,4 +42,4 @@ class UserFormView(View):
                     login(request, user)
                     return redirect('/farm')
 
-        return render(request, self.template_name, {'form': form})
+        return render(request, self.template_name, {'userform': user_form, 'profileform':profile_form})

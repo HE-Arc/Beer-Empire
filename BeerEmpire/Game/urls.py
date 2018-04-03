@@ -7,7 +7,7 @@ urlpatterns = [
      path('', include('django.contrib.auth.urls')),
 
      path('', RedirectView.as_view(url='/login', permanent=False), name='index'),
-     path('register', views.UserFormView.as_view(), name='Register'),
+     path('register', views.RegisterView.as_view(), name='Register'),
      path('farm', views.FarmView.as_view(), name='Farm'),
      path('factory', views.FactoryView.as_view(), name='Factory'),
      path('market', views.MarketView.as_view(), name='Market')
