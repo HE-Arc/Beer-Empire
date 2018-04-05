@@ -18,6 +18,13 @@
         <li class="right"><form>{% csrf_token %}<button type="submit" formaction="{% url 'logout' %}" formmethod="POST">Logout</button></form></li>
       </ul>
     </nav>
+    <div id="data"
+        data-maltslaves="{{ profile.employee_malt }}"
+        data-yeastslaves="{{ profile.employee_yeast }}"
+        data-hopsslaves="{{ profile.employee_hops }}"
+        data-idleslaves="{{ profile.employee_idle }}"
+        data-nbMoney="{{ profile.ressources_money }}">
+    </div>
     <aside>
       <div id="factory_name" class="cards malt" data-malt="{{ profile.ressources_malt }}">
         {{ profile.factory_name }}

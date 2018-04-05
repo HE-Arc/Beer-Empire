@@ -5,14 +5,10 @@ var nbMaltSlaves;
 var nbYeastSlaves;
 var nbHopsSlaves;
 var nbIdleSlaves;
-
-/*
-MEMENTO:
-1. add event listener -> on click = function(){} To make is cleaner,
-   less code in the html file, we handle everythin in the .js.
-2. Separate nb of farmers in a new .js file.
-3. We need a DRYer in here!
-*/
+var nbMoney;
+var buffPrice;
+var buffPrice;
+var buffPrice;
 
 function clickOnMalt(){
   nbMalt++;
@@ -71,6 +67,16 @@ function ClickOnSubHopsSlave(){
   updateValues();
 }
 
+function AddSlave(){
+    var slavePrice = 1000;
+    if(nbMoney >= slavePrice)
+    {
+        nbMoney -= slavePrice;
+        nbIdleSlaves++;
+    }
+    updateValues();
+}
+
 function updateValues()
 {
     document.getElementById("nbMalt").innerHTML  = nbMalt + "<small>kg</small>";
@@ -80,6 +86,9 @@ function updateValues()
     document.getElementById("farmerMalt").innerHTML = nbMaltSlaves + " farmer";
     document.getElementById("farmerYeast").innerHTML = nbYeastSlaves + " farmer";
     document.getElementById("farmerHops").innerHTML = nbHopsSlaves + " farmer";
+
+    document.getElementById("nbMoney").innerHTML = nbMoney + "$";
+
 }
 
 window.onload = function(){
@@ -96,5 +105,6 @@ window.onload = function(){
     nbHopsSlaves = dataDiv.getAttribute("data-hopsslaves");
     // has 100 for testing purposes. Should only come from db.
     nbIdleSlaves = dataDiv.getAttribute("data-idleslaves");
+    nbMoney = dataDiv.getAttribute("data-nbMoney");
   }
 }
