@@ -8,14 +8,8 @@ The game is around the theme of beer and consist in two stage (third in bonus) :
   
 * The factory will provide beers, that can be sold by contracts provided by missions. Missions example :
   * Creating beer is also click based.
-  * Spend a certain amount of ressources
-  * Create a certain amount of ressources, in a determinate time.
-  * (Bonus : Minigames)
-  
+  * Spend a certain amount of ressources and sold beers.  
     
-* (Bonus) Afterwards, the player will reach the market part, where he will be able to share his ressources with those of other players.
+* Afterwards, the player will reach the market part, where he will be able to buy employees that will farm the ressources automaticly.
 
 
-* There is also a laboratory part where player, can bought technologie and employee.
-  * Technologie will upgrade the income, production, etc...
-  * Employee will automise the harvesting/making of ressources/beers.
