@@ -157,6 +157,10 @@ aside{
   cursor: pointer;
 }
 
+.engine:hover{
+  cursor: pointer;
+}
+
 /*COLORS*/
 
 /*Malt, Hops, Yeast*/

@@ -11,26 +11,26 @@
 			<hr/>
 			<div class="gameboard">
 				<div class="farm malt">
-					<div class="inner" onclick="clickOnMalt()" >Malt</div>
+					<div class="inner" onclick="clickOnFarm('ressources_malt')" >Malt</div>
 					<div class="buttonzone">
-						<div class="button add" id="addSlaveMalt" onclick="ClickOnAddMaltSlave()">+</div>
-						<div class="button sub" id="subSlaveMalt" onclick="ClickOnSubMaltSlave()">-</div>
+						<div class="button add" id="addSlaveMalt" onclick="AddSlaveToFarm('employee_malt')">+</div>
+						<div class="button sub" id="subSlaveMalt" onclick="RemoveSlaveFromFarm('employee_malt')">-</div>
 					</div>
 				</div>
 
 				<div class="farm yeast">
-					<div class="inner" onclick="clickOnYeast()">Yeast</div>
+					<div class="inner" onclick="clickOnFarm('ressources_yeast')">Yeast</div>
 					<div class="buttonzone">
-						<div class="button add" id="addSlaveYeast" onclick="ClickOnAddYeastSlave()">+</div>
-						<div class="button sub" id="subSlaveYeast" onclick="ClickOnSubYeastSlave()">-</div>
+						<div class="button add" id="addSlaveYeast" onclick="AddSlaveToFarm('employee_yeast')">+</div>
+						<div class="button sub" id="subSlaveYeast" onclick="RemoveSlaveFromFarm('employee_yeast')">-</div>
 					</div>
 				</div>
 
 				<div class="farm hops">
-					<div class="inner" onclick="clickOnHops()">Hops</div>
+					<div class="inner" onclick="clickOnFarm('ressources_hops')">Hops</div>
 					<div class="buttonzone">
-						<div class="button add" id="addSlaveHops" onclick="ClickOnAddHopsSlave()">+</div>
-						<div class="button sub" id="subSlaveHops" onclick="ClickOnSubHopsSlave()">-</div>
+						<div class="button add" id="addSlaveHops" onclick="AddSlaveToFarm('employee_hops')">+</div>
+						<div class="button sub" id="subSlaveHops" onclick="RemoveSlaveFromFarm('employee_hops')">-</div>
 					</div>
 				</div>
 			</div>

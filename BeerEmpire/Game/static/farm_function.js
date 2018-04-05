@@ -1,11 +1,3 @@
-var nbMalt;
-var nbYeast;
-var nbHops;
-var nbMaltSlaves;
-var nbYeastSlaves;
-var nbHopsSlaves;
-var nbIdleSlaves;
-
 var Profile = {
   "ressources_malt":0,
   "ressources_hops":0,
@@ -17,6 +9,7 @@ var Profile = {
   "employee_idle":0,
   "employee_yeast":0,
 }
+
 
 function objToParametters(obj){
   parammeters = "";
@@ -39,75 +32,51 @@ function gameLoop(){
   })
 }
 
-function clickOnMalt(){
-  nbMalt++;
-  updateValues();
-}
-function clickOnYeast(){
-  nbYeast++;
-  updateValues();
-}
-function clickOnHops(){
-  nbHops++;
+function clickOnFarm(key){
+  Profile[key]++;
   updateValues();
 }
 
-function ClickOnAddMaltSlave(){
-  if(nbIdleSlaves>0){
-    nbMaltSlaves++;
-    nbIdleSlaves--;
+function AddSlaveToFarm(key){
+  if(Profile["employee_idle"]>0){
+    Profile[key]++;
+    Profile["employee_idle"]--;
   }
   updateValues();
 }
-function ClickOnAddYeastSlave(){
-  if(nbIdleSlaves>0){
-    nbYeastSlaves++;
-    nbIdleSlaves--;
-  }
-  updateValues();
-}
-function ClickOnAddHopsSlave(){
-  if(nbIdleSlaves>0){
-    nbHopsSlaves++;
-    nbIdleSlaves--;
+function RemoveSlaveFromFarm(key){
+  if(Profile[key]>0){
+    Profile["employee_idle"]++;
+    Profile[key]--;
   }
   updateValues();
 }
 
-function ClickOnSubMaltSlave(){
-  if(nbMaltSlaves > 0){
-    nbMaltSlaves--;
-    nbIdleSlaves++;
-  }
-  updateValues();
+function MakeAndSoldBeer(price, ressouces)
+{
+    if(Profile["ressources_malt"] >= ressouces[0] && Profile["ressources_yeast"] >= ressouces[1] && Profile["ressources_hops"] >= ressouces[2])
+    {
+        Profile["ressources_money"] += price;
+        Profile["ressources_malt"] -= ressouces[0];
+        Profile["ressources_yeast"] -= ressouces[1];
+        Profile["ressources_hops"] -= ressouces[2];
+    }
+    updateValues();
 }
-function ClickOnSubYeastSlave(){
-  if(nbYeastSlaves > 0){
-    nbYeastSlaves--;
-    nbIdleSlaves++;
-  }
-  updateValues();
-}
-function ClickOnSubHopsSlave(){
-  if(nbHopsSlaves > 0){
-    nbHopsSlaves--;
-    nbIdleSlaves++;
-  }
-  updateValues();
-}
-
 
 function updateValues()
 {
-    document.getElementById("nbMalt").innerHTML  = nbMalt + "<small>kg</small>";
-    document.getElementById("nbYeast").innerHTML  = nbYeast  + "<small>kg</small>";
-    document.getElementById("nbHops").innerHTML  = nbHops  + "<small>kg</small>";
+    document.getElementById("nbMalt").innerHTML  = Profile["ressources_malt"] + "<small>kg</small>";
+    document.getElementById("nbYeast").innerHTML  = Profile["ressources_yeast"]  + "<small>kg</small>";
+    document.getElementById("nbHops").innerHTML  = Profile["ressources_hops"]  + "<small>kg</small>";
 
-    document.getElementById("farmerMalt").innerHTML = nbMaltSlaves + " farmer";
-    document.getElementById("farmerYeast").innerHTML = nbYeastSlaves + " farmer";
-    document.getElementById("farmerHops").innerHTML = nbHopsSlaves + " farmer";
+    document.getElementById("farmerMalt").innerHTML = Profile["employee_malt"] + " farmer";
+    document.getElementById("farmerYeast").innerHTML = Profile["employee_yeast"] + " farmer";
+    document.getElementById("farmerHops").innerHTML = Profile["employee_hops"] + " farmer";
 
+    document.getElementById("nbMoney").innerHTML = Profile["ressources_money"] + "$";
 
+    gameLoop();
 }
 
 window.onload = function(){
