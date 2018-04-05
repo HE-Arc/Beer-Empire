@@ -91,9 +91,9 @@ function updateValues()
     document.getElementById("farmerMalt").innerHTML = Profile["employee_malt"] + " farmer";
     document.getElementById("farmerYeast").innerHTML = Profile["employee_yeast"] + " farmer";
     document.getElementById("farmerHops").innerHTML = Profile["employee_hops"] + " farmer";
-    document.getElementById("nbEmployee").innerHTML = Profile["employee_idle"] + " farmer";
+    document.getElementById("nbEmployee").innerHTML = Profile["employee_idle"];
 
-    document.getElementById("nbMoney").innerHTML = Profile["ressources_money"] + "$";
+    document.getElementById("nbMoney").innerHTML = Profile["ressources_money"] + "<small>$</small>";
 
     updateModel();
 }

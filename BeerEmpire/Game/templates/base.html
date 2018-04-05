@@ -29,7 +29,11 @@
       <div id="factory_name" class="cards malt" data-malt="{{ profile.ressources_malt }}">
         {{ profile.factory_name }}
       </div>
-
+      <div class="cards money">
+        <span class="title">Money</span>
+        <span class="quantum" id="nbMoney" data-malt="{{ profile.ressources_money }}">
+        {{ profile.ressources_money }}<small>$</small></span>
+      </div>
       <div class="cards malt">
         <span class="title">Malt</span>
         <span class="quantum" id="nbMalt" data-malt="{{ profile.ressources_malt }}">
@@ -48,13 +52,10 @@
           {{ profile.ressources_hops }}<small>kg</small></span>
           <span id="farmerHops" class="small">{{ profile.employee_hops }} farmer</span>
       </div>
-      <div class="cards money">
-        <span class="quantum" id="nbMoney" data-malt="{{ profile.ressources_money }}">
-        {{ profile.ressources_money }}$</span>
-      </div>
       <div class="cards employee">
+        <span class="title">Unassigned farmer</span>
         <span class="quantum" id="nbEmployee" data-malt="{{ profile.employee_idle }}">
-        {{ profile.employee_idle }} farmer</span>
+        {{ profile.employee_idle }}</span>
       </div>
     </aside>
     <div class="content">
