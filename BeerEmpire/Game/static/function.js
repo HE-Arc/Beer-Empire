@@ -37,6 +37,7 @@ function employeeLoop(){
   Profile["ressources_yeast"] += Profile["employee_yeast"];
   Profile["ressources_hops"] += Profile["employee_hops"];
   updateValues();
+
 }
 
 function clickOnFarm(key){
@@ -106,4 +107,5 @@ window.onload = function(){
     Profile = obj[0]['fields'];
   })
 
+  setInterval(employeeLoop, 1000);
 }

@@ -31,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="beerfactory.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="beerfactory.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/static/beerfactory.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
@@ -41,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="factory.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="factory.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Game/templates/game/factory.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
@@ -54,8 +54,8 @@
       <file leaf-file-name="function.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/static/function.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="20" />
+            <state relative-caret-position="76">
+              <caret line="75" column="1" lean-forward="true" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -110,8 +110,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="40" />
+    <option name="x" value="171" />
+    <option name="y" value="5" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -211,7 +211,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="40" width="1400" height="1000" extended-state="0" />
+    <frame x="171" y="5" width="1400" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -371,26 +371,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/templates/game/factory.html">
+    <entry file="file://$PROJECT_DIR$/Game/static/beerfactory.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="252">
+          <caret line="247" column="1" lean-forward="true" selection-start-line="247" selection-start-column="1" selection-end-line="247" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Game/static/function.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="20" />
+        <state relative-caret-position="76">
+          <caret line="75" column="1" lean-forward="true" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/static/beerfactory.css">
+    <entry file="file://$PROJECT_DIR$/Game/templates/game/factory.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="247" column="1" lean-forward="true" selection-start-line="247" selection-start-column="1" selection-end-line="247" selection-end-column="1" />
+        <state relative-caret-position="144">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
           <folding />
         </state>
       </provider>
