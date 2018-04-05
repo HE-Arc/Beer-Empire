@@ -6,7 +6,7 @@ from django.views.generic.base import RedirectView
 urlpatterns = [
      path('', include('django.contrib.auth.urls')),
 
-     path('', RedirectView.as_view(url='/login', permanent=False), name='index'),
+     path('', RedirectView.as_view(url='farm', permanent=False), name='index'),
      path('register', views.RegisterView.as_view(), name='Register'),
      path('farm', views.FarmView.as_view(), name='Farm'),
      path('factory', views.FactoryView.as_view(), name='Factory'),
