@@ -95,6 +95,6 @@ window.onload = function(){
     nbYeastSlaves = dataDiv.getAttribute("data-yeastslaves");
     nbHopsSlaves = dataDiv.getAttribute("data-hopsslaves");
     // has 100 for testing purposes. Should only come from db.
-    nbIdleSlaves = dataDiv.getAttribute("data-idleslaves") + 100;
+    nbIdleSlaves = dataDiv.getAttribute("data-idleslaves");
   }
 }

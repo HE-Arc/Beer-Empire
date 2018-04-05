@@ -176,11 +176,17 @@ aside{
   border-color: #d0b38e;
 }
 
+.money{
+  background-color: #15a308;
+  border-color: #0d7a03;
+}
+
 .beer{
   background-color: #ff9b00;
   border-color: #f6ddc7;
   color:white;
 }
+
 
 #factory_name{
   background-color:#e0c39e;
