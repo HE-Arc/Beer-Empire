@@ -159,6 +159,11 @@ aside{
 }
 
 .engine .description{
+  line-height: 1em;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-top: 1.5em;
+  margin-bottom: 2.5em;
   font-size: .7em;
   font-style: italic;
 }
