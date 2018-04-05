@@ -38,3 +38,23 @@ class MarketView(GameViewBase):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
+
+class ApiProfile(LoginRequiredMixin, View):
+    def post(self, request):
+        try:
+            data = request.POST
+            profile = self.request.user.profile
+            profile.ressources_malt = data.get("ressources_malt")
+            profile.ressources_hops = data.get("ressources_hops")
+            profile.ressources_yeast = data.get("ressources_yeast")
+            profile.ressources_money = data.get("ressources_money")
+
+            profile.employee_malt = data.get("employee_malt")
+            profile.employee_hops = data.get("employee_hops")
+            profile.employee_yeast = data.get("employee_yeast")
+            profile.employee_idle = data.get("employee_idle")
+
+            profile.save()
+            return HttpResponse(status=200)
+        except Exception:
+            return HttpResponse(status=500)

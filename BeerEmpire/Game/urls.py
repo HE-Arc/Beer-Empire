@@ -10,5 +10,6 @@ urlpatterns = [
      path('register', views.RegisterView.as_view(), name='Register'),
      path('farm', views.FarmView.as_view(), name='Farm'),
      path('factory', views.FactoryView.as_view(), name='Factory'),
-     path('market', views.MarketView.as_view(), name='Market')
+     path('market', views.MarketView.as_view(), name='Market'),
+     path('api/profile', views.ApiProfile.as_view(), name='ApiProfile')
 ]
