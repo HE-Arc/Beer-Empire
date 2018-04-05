@@ -10,15 +10,21 @@
 			<h1 class="display-4">Factory</h1>
 			<hr/>
 			<div class="gameboard">
-				<div id="engineBuff" class="engine beer Buff" onclick="makeAndSoldBeer(7,[4,2,1])">
-					<div class="title">Buff</div>
-					<div class="need">Malt 10</div>
-					<div class="need">Yeast 12</div>
-					<div class="need">Hops 3</div>
-					<div class="price">100$</div>
+				{% for beer in beers %}
+				<div
+					class="engine beer {{beer.name}}"
+					onclick="makeAndSoldBeer(
+						{{beer.cost}},[
+						{{beer.need_malt}},
+						{{beer.need_yeast}},
+						{{beer.need_hops}}])">
+					<div class="title">{{beer.name}}</div>
+					<div class="need">Malt {{beer.need_malt}}</div>
+					<div class="need">Yeast {{beer.need_yeast}}</div>
+					<div class="need">Hops {{beer.need_hops}}</div>
+					<div class="price">{{beer.cost}}$</div>
 				</div>
-				<div id="engineCipherKey" class="engine beer CipherKey" onclick="makeAndSoldBeer(13,[2,4,3])">Cipher Key</div>
-				<div id="engineGobronite" class="engine beer Gobronite" onclick="makeAndSoldBeer(16,[4,4,5])">Gobronite</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
