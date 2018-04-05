@@ -64,6 +64,16 @@ function MakeAndSoldBeer(price, ressouces)
     updateValues();
 }
 
+function BuyEmployee(price)
+{
+    if(Profile["ressources_money"] >= price)
+    {
+        Profile["ressources_money"] -= price;
+        Profile["employee_idle"]++;
+    }
+    updateValues();
+}
+
 function updateValues()
 {
     document.getElementById("nbMalt").innerHTML  = Profile["ressources_malt"] + "<small>kg</small>";
@@ -73,6 +83,7 @@ function updateValues()
     document.getElementById("farmerMalt").innerHTML = Profile["employee_malt"] + " farmer";
     document.getElementById("farmerYeast").innerHTML = Profile["employee_yeast"] + " farmer";
     document.getElementById("farmerHops").innerHTML = Profile["employee_hops"] + " farmer";
+    document.getElementById("nbEmployee").innerHTML = Profile["employee_idle"] + " farmer";
 
     document.getElementById("nbMoney").innerHTML = Profile["ressources_money"] + "$";
 

@@ -6,7 +6,7 @@
     <title>{% block title %}Beer Empire{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'beerfactory.css' %}"/>
-    <script src="{% static 'farm_function.js'%}"></script>
+    <script src="{% static 'function.js'%}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   </head>
   <body>
@@ -54,7 +54,7 @@
       </div>
       <div class="cards employee">
         <span class="quantum" id="nbEmployee" data-malt="{{ profile.employee_idle }}">
-        {{ profile.employee_idle }}</span>
+        {{ profile.employee_idle }} farmer</span>
       </div>
     </aside>
     <div class="content">

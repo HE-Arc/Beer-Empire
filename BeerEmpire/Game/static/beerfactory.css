@@ -161,6 +161,11 @@ aside{
   cursor: pointer;
 }
 
+.market:hover{
+  cursor: pointer;
+}
+
+
 /*COLORS*/
 
 /*Malt, Hops, Yeast*/
