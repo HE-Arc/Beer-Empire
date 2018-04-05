@@ -1,5 +1,6 @@
 {% extends '../base.html' %}
 {% load staticfiles %}
+{% load beer_color %}
 
 {% block title %}BeerEmpire | Factory{% endblock %}
 
@@ -13,6 +14,7 @@
 				{% for beer in beers %}
 				<div
 					class="engine beer {{beer.name}}"
+					style="background-color:hsl(36, 100%, {{ beer.need_malt|beerColor }}%);"
 					onclick="makeAndSoldBeer(
 						{{beer.cost}},[
 						{{beer.need_malt}},
