@@ -156,7 +156,11 @@ aside{
 }
 
 .engine .price{
- vertical-align: bottom;
+}
+
+.engine .description{
+  font-size: .7em;
+  font-style: italic;
 }
 
 .engine{
@@ -235,6 +239,11 @@ aside{
 .money{
   background-color: #15a308;
   border-color: #0d7a03;
+}
+
+.employee{
+  background-color:#dfdfdf;
+  border-color:#101010;
 }
 
 .beer{
