@@ -3,6 +3,9 @@ from django.http import HttpResponse
 from django.views import generic, View
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core import serializers
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 
 from Game.models import Profile
 
@@ -39,10 +42,16 @@ class MarketView(GameViewBase):
         context = super().get_context_data(**kwargs)
         return context
 
+@method_decorator(csrf_exempt, name='dispatch')
 class ApiProfile(LoginRequiredMixin, View):
+    login_url = '/login/'
+    redirect_field_name = 'redirect_to'
+
+    @csrf_exempt
     def post(self, request):
         try:
             data = request.POST
+            print(len(data))
             profile = self.request.user.profile
             profile.ressources_malt = data.get("ressources_malt")
             profile.ressources_hops = data.get("ressources_hops")
@@ -56,5 +65,10 @@ class ApiProfile(LoginRequiredMixin, View):
 
             profile.save()
             return HttpResponse(status=200)
-        except Exception:
+        except Exception as e:
+            print(e)
             return HttpResponse(status=500)
+
+    def get(self, request):
+        data = serializers.serialize('json', [self.request.user.profile,])
+        return HttpResponse(data, content_type='application/json')

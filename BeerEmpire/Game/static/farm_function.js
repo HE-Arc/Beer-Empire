@@ -5,10 +5,39 @@ var nbMaltSlaves;
 var nbYeastSlaves;
 var nbHopsSlaves;
 var nbIdleSlaves;
-var nbMoney;
-var buffPrice;
-var buffPrice;
-var buffPrice;
+
+var Profile = {
+  "ressources_malt":0,
+  "ressources_hops":0,
+  "ressources_money":0,
+  "ressources_yeast":0,
+
+  "employee_hops":0,
+  "employee_malt":0,
+  "employee_idle":0,
+  "employee_yeast":0,
+}
+
+function objToParametters(obj){
+  parammeters = "";
+  for(var key in obj){
+    val = obj[key];
+    parammeters += key+"="+val+"&";
+  }
+  return parammeters;
+}
+
+function gameLoop(){
+  // Save with API
+  fetch('/api/profile', {
+    method: 'POST',
+    credentials: "include",
+    body: objToParametters(Profile),
+    headers:{
+      "Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"
+    }
+  })
+}
 
 function clickOnMalt(){
   nbMalt++;
@@ -67,15 +96,6 @@ function ClickOnSubHopsSlave(){
   updateValues();
 }
 
-function AddSlave(){
-    var slavePrice = 1000;
-    if(nbMoney >= slavePrice)
-    {
-        nbMoney -= slavePrice;
-        nbIdleSlaves++;
-    }
-    updateValues();
-}
 
 function updateValues()
 {
@@ -87,11 +107,17 @@ function updateValues()
     document.getElementById("farmerYeast").innerHTML = nbYeastSlaves + " farmer";
     document.getElementById("farmerHops").innerHTML = nbHopsSlaves + " farmer";
 
-    document.getElementById("nbMoney").innerHTML = nbMoney + "$";
 
 }
 
 window.onload = function(){
+  fetch('/api/profile', {
+     credentials: "include"
+  }).then(function(response){
+    return response.json();
+  }).then(function(obj){
+    Profile = obj[0]['fields'];
+  })
   // See base.html for the origine of those variables.
   nbMalt = document.getElementById("nbMalt").getAttribute("data-malt");
   nbYeast = document.getElementById("nbYeast").getAttribute("data-yeast");

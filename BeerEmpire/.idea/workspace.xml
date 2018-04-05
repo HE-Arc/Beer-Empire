@@ -21,11 +21,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="farm_function.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="farm_function.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Game/static/farm_function.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="107" column="51" lean-forward="false" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
+            <state relative-caret-position="1944">
+              <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -53,7 +53,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
@@ -125,9 +125,9 @@
         <option value="$PROJECT_DIR$/Game/static/beerfactory.css" />
         <option value="$PROJECT_DIR$/Game/static/market_function.js" />
         <option value="$PROJECT_DIR$/Game/templates/game/market.html" />
-        <option value="$PROJECT_DIR$/Game/static/farm_function.js" />
         <option value="$PROJECT_DIR$/Game/templates/game/farm.html" />
         <option value="$PROJECT_DIR$/Game/templates/base.html" />
+        <option value="$PROJECT_DIR$/Game/static/farm_function.js" />
       </list>
     </option>
   </component>
@@ -383,14 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/static/farm_function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="107" column="51" lean-forward="false" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Game/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -413,6 +405,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="54" lean-forward="true" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/static/farm_function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1944">
+          <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
           <folding />
         </state>
       </provider>
