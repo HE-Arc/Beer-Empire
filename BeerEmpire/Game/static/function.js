@@ -20,8 +20,8 @@ function objToParametters(obj){
   return parammeters;
 }
 
-function gameLoop(){
-  // Save with API
+function updateModel(){
+    // Save with API
   fetch('/api/profile', {
     method: 'POST',
     credentials: "include",
@@ -32,19 +32,26 @@ function gameLoop(){
   })
 }
 
+function employeeLoop(){
+  Profile["ressources_malt"] += Profile["employee_malt"];
+  Profile["ressources_yeast"] += Profile["employee_yeast"];
+  Profile["ressources_hops"] += Profile["employee_hops"];
+  updateValues();
+}
+
 function clickOnFarm(key){
   Profile[key]++;
   updateValues();
 }
 
-function AddSlaveToFarm(key){
+function addSlaveToFarm(key){
   if(Profile["employee_idle"]>0){
     Profile[key]++;
     Profile["employee_idle"]--;
   }
   updateValues();
 }
-function RemoveSlaveFromFarm(key){
+function removeSlaveFromFarm(key){
   if(Profile[key]>0){
     Profile["employee_idle"]++;
     Profile[key]--;
@@ -52,7 +59,7 @@ function RemoveSlaveFromFarm(key){
   updateValues();
 }
 
-function MakeAndSoldBeer(price, ressouces)
+function makeAndSoldBeer(price, ressouces)
 {
     if(Profile["ressources_malt"] >= ressouces[0] && Profile["ressources_yeast"] >= ressouces[1] && Profile["ressources_hops"] >= ressouces[2])
     {
@@ -64,7 +71,7 @@ function MakeAndSoldBeer(price, ressouces)
     updateValues();
 }
 
-function BuyEmployee(price)
+function buyEmployee(price)
 {
     if(Profile["ressources_money"] >= price)
     {
@@ -87,7 +94,7 @@ function updateValues()
 
     document.getElementById("nbMoney").innerHTML = Profile["ressources_money"] + "$";
 
-    gameLoop();
+    updateModel();
 }
 
 window.onload = function(){
@@ -98,19 +105,5 @@ window.onload = function(){
   }).then(function(obj){
     Profile = obj[0]['fields'];
   })
-  // See base.html for the origine of those variables.
-  nbMalt = document.getElementById("nbMalt").getAttribute("data-malt");
-  nbYeast = document.getElementById("nbYeast").getAttribute("data-yeast");
-  nbHops = document.getElementById("nbHops").getAttribute("data-hops");
 
-  // Put this in a new .js File only loaded in farm.html.
-  dataDiv = document.getElementById("data");
-  if(dataDiv != null){
-    nbMaltSlaves = dataDiv.getAttribute("data-maltslaves");
-    nbYeastSlaves = dataDiv.getAttribute("data-yeastslaves");
-    nbHopsSlaves = dataDiv.getAttribute("data-hopsslaves");
-    // has 100 for testing purposes. Should only come from db.
-    nbIdleSlaves = dataDiv.getAttribute("data-idleslaves");
-    nbMoney = dataDiv.getAttribute("data-nbMoney");
-  }
 }
