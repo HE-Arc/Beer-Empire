@@ -64,6 +64,7 @@ server "capython.srvz-webapp.he-arc.ch", user: "poweruser",
 					 roles: %w{app db web}, port: 2242
 
 set :deploy_to, "/var/www/#{fetch(:application)}"
+set :branch, 'production'
 
 after 'deploy:publishing', 'uwsgi:restart'
 
